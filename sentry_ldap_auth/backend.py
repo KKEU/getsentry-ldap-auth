@@ -50,6 +50,7 @@ class SentryLdapBackend(LDAPBackend):
         user = model[0]
 
         user.is_managed = True
+        user.save()
 
         # Add the user email address
         try:
